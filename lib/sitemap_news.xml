@@ -3,29 +3,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
-  {% assign collections = site.collections | where_exp:'collection','collection.output != false' %}
-
-  {% for collection in collections %}
-    {% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}
-    {% for doc in docs %}
-    <url>
-      <loc>{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
-
-      <news:news>
-        <news:publication>
-          <news:name>{{site.publisher}}</news:name>
-          <news:language>en</news:language>
-        </news:publication>
-        <news:publication_date>{{ page.date | date_to_xmlschema }}</news:publication_date>
-        <news:title>{{ page.title }}</news:title>
-      </news:news>
-    </url>
-    {% endfor %}
-  {% endfor %}
-
-  {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != "/404.html"'
-  %}
-  {% for page in pages %}
+  {% assign posts = site.posts | where_exp:'doc','doc.sitemap != false' %}
+  {% for page in posts %}
     <url>
       <loc>{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
 
