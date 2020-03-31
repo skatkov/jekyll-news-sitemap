@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-news-sitemap (0.0.1)
+    jekyll-news-sitemap (0.0.2)
       jekyll (>= 3.7, < 5.0)
 
 GEM
