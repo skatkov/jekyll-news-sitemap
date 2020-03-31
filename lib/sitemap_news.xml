@@ -10,7 +10,7 @@
 
       <news:news>
         <news:publication>
-          <news:name>{{page.publisher}}</news:name>
+          <news:name>{{site.publisher}}</news:name>
           <news:language>en</news:language>
         </news:publication>
         <news:publication_date>{{ page.date | date_to_xmlschema }}</news:publication_date>
