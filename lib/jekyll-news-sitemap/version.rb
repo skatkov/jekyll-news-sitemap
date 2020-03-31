@@ -2,6 +2,6 @@
 
 module Jekyll
   module NewsSitemap
-    VERSION = "1.4.0"
+    VERSION = "0.0.1"
   end
 end
