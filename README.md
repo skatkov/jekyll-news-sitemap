@@ -23,7 +23,7 @@ plugins:
 If all gem plugins have the same `priority`, they will be executed in the
 order they are required, generally. Thus, if you have other plugins which
 generate content and store that content in `site.pages`, `site.posts`, or
-`site.collections`, be sure to require `jekyll-sitemap` either *after*
+`site.collections`, be sure to require `jekyll-news-sitemap` either *after*
 those other gems if you *want* the sitemap to include the generated
 content, or *before* those other gems if you *don't want* the sitemap to
 include the generated content from the gems. (Programming is *hard*.)
@@ -33,9 +33,9 @@ templates that iterate through all pages (for example, to build a menu of
 all of the site's content).
 
 ## Note on Use with GitHub Pages Gem
-The GitHub Pages gem ignores all plugins included in the Gemfile. If you only include `jekyll-sitemap` in the Gemfile without also including it in the `_config.yml` *the plugin will not work*. This can be confusing because the official Jekyll docs state that plugins can be included in either the Gemfile or `_config.yml`.
+The GitHub Pages gem ignores all plugins included in the Gemfile. If you only include `jekyll-news-sitemap` in the Gemfile without also including it in the `_config.yml` *the plugin will not work*. This can be confusing because the official Jekyll docs state that plugins can be included in either the Gemfile or `_config.yml`.
 
-When building a site that uses the GitHub Pages gem, follow the instructions above and ensure that `jekyll-sitemap` is listed in the `plugins` array in `_config.yml`.
+When building a site that uses the GitHub Pages gem, follow the instructions above and ensure that `jekyll-news-sitemap` is listed in the `plugins` array in `_config.yml`.
 
 :warning: If you are using Jekyll < 3.5.0 use the `gems` key instead of `plugins`.
 
