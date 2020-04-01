@@ -3,19 +3,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
-  {% assign posts = site.posts | where_exp:'doc','doc.sitemap != false' %}
-  {% for page in posts %}
-    <url>
-      <loc>{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+  {% assign timeframe = 172800 %}
 
-      <news:news>
-        <news:publication>
-          <news:name>{{site.publisher}}</news:name>
-          <news:language>en</news:language>
-        </news:publication>
-        <news:publication_date>{{ page.date | date_to_xmlschema }}</news:publication_date>
-        <news:title>{{ page.title }}</news:title>
-      </news:news>
-    </url>
+  {% assign posts = site.posts | where_exp:'doc','doc.sitemap != false' %}
+  {% for post in posts %}
+    {% assign post_in_seconds = post.date | date: "%s" | plus: 0 %}
+    {% assign recent_posts = "now" | date: "%s" | minus: timeframe  %}
+    
+    {% if post_in_seconds > recent_posts %}
+      <url>
+        <loc>{{ post.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+
+        <news:news>
+          <news:publication>
+            <news:name>{{site.publisher}}</news:name>
+            <news:language>en</news:language>
+          </news:publication>
+          <news:publication_date>{{ post.date | date_to_xmlschema }}</news:publication_date>
+          <news:title>{{ post.title }}</news:title>
+        </news:news>
+      </url>
+    {% endif %}
   {% endfor %}
 </urlset>
