@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/skatkov/jekyll-news-sitemap.svg?branch=master)](https://travis-ci.org/skatkov/jekyll-news-sitemap)
+
 # Jekyll::NewsSitemap
 
 *Jekyll plugin to silently generate Google News Sitemap based on posts*
@@ -5,7 +7,7 @@
 More info on Google News Sitemap could be found here:
 https://support.google.com/news/publisher-center/answer/9606710?hl=en&ref_topic=9606468
 
-This gem is a rip-off from jekyll-sitemap.
+This gem was heavily infuenced by jekyll-sitemap and is still "work-in-progress".
 ## Usage
 
 1. Add `gem 'jekyll-news-sitemap'` to your site's Gemfile and run `bundle`
