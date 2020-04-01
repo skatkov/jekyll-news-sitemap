@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.2]
+### Added
+- Adding schema link to sitemap file
+
 ## [0.1.1]
 ### Change
 - include only posts from last 2 days

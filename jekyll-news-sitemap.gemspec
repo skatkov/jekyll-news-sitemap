@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Jekyll gem for Google News sitemap"
   spec.description   = "Your friendly gem to produce Google News sitemap compatible xml file."
-  spec.homepage      = "https://www.github.com/skatkov/jekyll-news-sitemap"
+  spec.homepage      = "https://www.fbamonthly.com/jekyll-news-sitemap"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
