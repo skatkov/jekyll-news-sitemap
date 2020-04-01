@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sk@skylup.com"]
 
   spec.summary       = "Jekyll gem for Google News sitemap"
-  spec.description   = "Your friendly gem to produce Google News sitemap compatible xml file. https://support.google.com/news/publisher-center/answer/9607107?visit_id=637212842293134890-921468621&rd=1 "
+  spec.description   = "Your friendly gem to produce Google News sitemap compatible xml file."
   spec.homepage      = "https://www.github.com/skatkov/jekyll-news-sitemap"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
