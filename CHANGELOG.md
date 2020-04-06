@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.3]
+### Change
+- Return empty XML if there are no posts in last two days
+
 ## [0.1.2]
 ### Added
 - Adding schema link to sitemap file
