@@ -47,20 +47,6 @@ describe(Jekyll::JekyllNewsSitemap) do
     expect(contents).not_to match %r!<loc>http://example\.org/feeds/atom\.xml</loc>!
   end
 
-  it "does not include any static files named 404.html" do
-    expect(contents).not_to match %r!/static_files/404.html!
-  end
-
-  if Gem::Version.new(Jekyll::VERSION) >= Gem::Version.new("3.4.2")
-    it "does not include any static files that have set 'sitemap: false'" do
-      expect(contents).not_to match %r!/static_files/excluded\.pdf!
-    end
-
-    it "does not include any static files that have set 'sitemap: false'" do
-      expect(contents).not_to match %r!/static_files/html_file\.html!
-    end
-  end
-
   it "does not include posts that have set 'sitemap: false'" do
     expect(contents).not_to match %r!/exclude-this-post\.html</loc>!
   end
