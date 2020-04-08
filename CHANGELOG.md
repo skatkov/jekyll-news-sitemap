@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+## [0.1.4]
+### Change
+- If sitemap is empty, show valid empty XML.
 
 ## [0.1.3]
 ### Change
