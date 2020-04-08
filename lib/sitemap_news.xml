@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset>
   {% assign timeframe = 172800 %}
   {% assign posts = site.posts | where_exp:'doc','doc.sitemap != false' %}
   {% for post in posts %}
     {% assign post_in_seconds = post.date | date: "%s" | plus: 0 %}
     {% assign recent_posts = "now" | date: "%s" | minus: timeframe  %}
     {% if post_in_seconds > recent_posts %}
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
       <url>
         <loc>{{ post.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
 
@@ -18,7 +19,8 @@
           <news:title>{{ post.title }}</news:title>
         </news:news>
       </url>
+    </urlset>
     {% endif %}
   {% endfor %}
-</urlset>
+
 
