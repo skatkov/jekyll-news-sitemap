@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+## [0.2.0]
+### Change
+- Codebase cleanup
+- Another version of news-sitemap.xml for test
 ## [0.1.4]
 ### Change
 - If sitemap is empty, show valid empty XML.

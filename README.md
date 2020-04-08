@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/skatkov/jekyll-news-sitemap.svg?branch=master)](https://travis-ci.org/skatkov/jekyll-news-sitemap)
 
 # Jekyll::NewsSitemap
 
