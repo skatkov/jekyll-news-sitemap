@@ -6,7 +6,7 @@
 More info on Google News Sitemap could be found here:
 https://support.google.com/news/publisher-center/answer/9606710?hl=en&ref_topic=9606468
 
-This gem was heavily infuenced by jekyll-sitemap and is still "work-in-progress".
+This gem was heavily infuenced by jekyll-sitemap.
 ## Usage
 
 1. Add `gem 'jekyll-news-sitemap'` to your site's Gemfile and run `bundle`
